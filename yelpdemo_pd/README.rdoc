@@ -1,2 +1,2 @@
-*Yelp Clone from Project Disrupt
+Yelp Clone from Project Disrupt
 
