@@ -1,1 +1,2 @@
-tutorial used: http://guides.railsgirls.com/diary-app/
+Diary App from http://guides.railsgirls.com/diary-app/ 
+another resource: https://github.com/railsgirls/railsgirls.github.com/blob/master/_posts/2014-10-05-diary-app.markdown
