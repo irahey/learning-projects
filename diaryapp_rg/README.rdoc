@@ -1,0 +1,1 @@
+tutorial used: http://guides.railsgirls.com/diary-app/
