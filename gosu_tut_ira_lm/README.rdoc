@@ -1,1 +1,6 @@
 built using this tutorial: http://brettu.com/rails-ruby-tips-336-turn-rails-into-a-game-engine/
+
+New game:
+$rails console
+>> win = Window.new
+>> win.show
