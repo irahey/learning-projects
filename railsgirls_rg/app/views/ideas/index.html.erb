@@ -1,0 +1,18 @@
+<h1>Listing ideas</h1>
+<% @ideas.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |idea| %>
+      <div class="col-md-4">
+        <h4><%= link_to idea.name, idea %></h4>
+        <%= idea.description %>
+         <!-- <td><#%=  idea.picture %></td> --!>
+         <!--<#%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>-->
+         <%=  image_tag(idea.picture_url, :width => 300) if idea.picture.present? %>
+         <br/> <br/><br/><br/> <br/><br/>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+

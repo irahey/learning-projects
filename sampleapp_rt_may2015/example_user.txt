@@ -1,0 +1,16 @@
+#change file name extension from .txt to .rb when you need it for an app
+#to load from rails console, type: require './example_user' 
+#to delete from rails console, type: rm example_user.txt
+
+class User
+  attr_accessor :name, :email
+
+  def initialize(attributes = {})
+    @name  = attributes[:name]
+    @email = attributes[:email]
+  end
+
+  def formatted_email
+    "#{@name} <#{@email}>"
+  end
+end

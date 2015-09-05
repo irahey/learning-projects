@@ -1,0 +1,13 @@
+tutorial used: http://brettu.com/rails-ruby-tips-336-turn-rails-into-a-game-engine/
+
+GUIDE FOR DEENDENCIES INSTALLATION: https://github.com/gosu/gosu/wiki/Getting-Started-on-Linux
+	FOR UBUNTU 14
+		# Gosu's dependencies for both C++ and Ruby
+		sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
+		                     libgl1-mesa-dev libfreeimage-dev libopenal-dev libsndfile-dev
+
+		# To install Ruby - if you are using rvm or rbenv, please skip this step
+		sudo apt-get install ruby-dev
+
+		# If you are using rvm or rbenv, do not use 'sudo'
+		sudo gem install gosu

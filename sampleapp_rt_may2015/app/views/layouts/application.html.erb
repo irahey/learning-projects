@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+
+</head>
+<body>
+  <!--The site layout with partials for the stylesheets and header.-->
+  <%= render 'layouts/header' %>
+    <div class="container">
+     
+      
+    <!--Exercise 7: Adding the contents of the flash variable to the site layout-->
+    <!--- < % flash.each do |message_type, message| % > -->
+        <!--   <div class="alert alert-< %= message_type %>">< %= message % ></div   --!>
+        <!--Verify by running the test suite which uses the Rails content_tag helper
+         The flash ERb in the site layout using content_tag.-->
+        <!-- < % = content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <!-- < % end % > -->
+    
+    <!--Yield is responsible for inserting the contents of each page into the layout.
+    It’s not important to know exactly how this works; what matters is that using this layout ensures that, for example, visiting the page 
+    /static_pages/home converts the contents of home.html.erb to HTML and then inserts it in place of < %=yield % > --!>
+    <%= yield %>
+    
+    <!--The site layout with partials for the stylesheets and header.-->
+    <%= render 'layouts/footer' %>
+    <!--Adding some debug information to the site layout. Debug info is not displayed to users-->
+    <%= debug(params) if Rails.env.development? %>
+    </div>
+</body>
+</html>
