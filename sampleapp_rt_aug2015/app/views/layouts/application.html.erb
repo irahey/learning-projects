@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <!--<title><#%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title> Refactored version below, with a helper method -->
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <!--<#%= content_tag(:div, message, class: "alert alert-#{message_type}") %>    ==>The flash ERb in the site layout using content_tag.-->
+      <% end %>
+      <%= yield %>
+     <%= render 'layouts/footer' %>
+     <%= debug(params) if Rails.env.development? %> <!--This displays some useful information about each page using the built-in debug method and params variable. But this is limited to the development environment only -->
+
+    </div>
+  </body>
+</html>
