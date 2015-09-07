@@ -1,0 +1,1 @@
+Singing with Sinatra App is created using this tutorial: http://code.tutsplus.com/tutorials/singing-with-sinatra--net-18965
