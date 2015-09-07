@@ -1,0 +1,3 @@
+Tutorials used:
+https://www.codefellows.org/blog/tutorial-how-to-upload-files-using-the-aws-sdk-gem
+github repo: https://github.com/uploaders/aws-sdk-rails-4.2
